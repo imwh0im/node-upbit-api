@@ -1,20 +1,23 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+    env: {
+        node: true,
+        es2021: true
     },
-    "extends": [
-        "google",
-        "plugin:prettier/recommended",
+    extends: [
+        'google',
+        'plugin:prettier/recommended',
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 13,
-        "sourceType": "module"
+    parser: '@typescript-eslint/parser',
+    'parserOptions': {
+        ecmaVersion: 13,
+        sourceType: 'module'
     },
-    "plugins": [
-        "@typescript-eslint"
+    plugins: [
+        '@typescript-eslint'
     ],
-    "rules": {
+    rules: {
+      quotes: ['error', 'single'],
+      'sort-imports': 'warn',
+      'valid-jsdoc': 'off',
     }
 };
