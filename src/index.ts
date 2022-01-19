@@ -7,7 +7,7 @@ import {
   GetOrdersChanceRequestBody,
   GetOrdersChanceResponse,
   JwtPaylaod,
-} from '@types';
+} from './types';
 import axios, { AxiosResponse } from 'axios';
 import { v4 as uuidV4 } from 'uuid';
 
