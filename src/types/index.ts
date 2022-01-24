@@ -6,3 +6,5 @@ export * from './get-order-request-query.interface';
 export * from './get-order-response.interface';
 export * from './get-orders-request-query.interface';
 export * from './get-orders-response.interface';
+export * from './cancel-order-request-query.interface';
+export * from './cancel-order-response.interface';

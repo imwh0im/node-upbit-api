@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/imwh0im/upbitjs#readme",
   "dependencies": {
+    "api": "^4.2.0",
     "axios": "^0.24.0",
     "jsonwebtoken": "^8.5.1",
     "query-string": "^7.1.0",

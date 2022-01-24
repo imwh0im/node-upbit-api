@@ -3,6 +3,8 @@ import * as jwt from 'jsonwebtoken';
 import * as qs from 'query-string';
 
 import {
+  CancelOrderRequestQuery,
+  CancelOrderResponse,
   GetAccountsResponse,
   GetOrderRequestQuery,
   GetOrderResponse,
@@ -78,13 +80,20 @@ export class ApiUpbit {
 
   /**
    * Inquire the order list.
-   * `GET /v1/order`
+   * `GET /v1/orders`
    * https://docs.upbit.com/reference/%EC%A3%BC%EB%AC%B8-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%A1%B0%ED%9A%8C
    */
   public async getOrders(
     query: GetOrdersRequestQuery,
   ): Promise<GetOrdersResponse[]> {
-    return this.requestApi<GetOrdersResponse[]>('GET', 'orders', query);
+    return this.requestApi<GetOrdersResponse[]>('GET', '/orders', query);
+  }
+
+  /**
+   * Cancel Order
+   */
+  public async cancelOrder(query: CancelOrderRequestQuery) {
+    return this.requestApi<CancelOrderResponse>('DELETE', '/order', query);
   }
 
   /**
