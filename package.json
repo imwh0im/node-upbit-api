@@ -22,6 +22,16 @@
     "url": "https://github.com/imwh0im/upbitjs/issues"
   },
   "homepage": "https://github.com/imwh0im/upbitjs#readme",
+  "keywords": [
+    "bitcoin",
+    "bitcoin api",
+    "cryptocurrency",
+    "upbit",
+    "upbit api",
+    "upbit sdk",
+    "upbit typescript",
+    "upbit node"
+  ],
   "dependencies": {
     "axios": "^0.24.0",
     "jsonwebtoken": "^8.5.1",

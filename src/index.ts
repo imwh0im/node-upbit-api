@@ -121,6 +121,7 @@ export class ApiUpbit {
       access_key: this.AccessKey,
       nonce: uuidV4(),
       query_hash: queryHash,
+      query_hash_alg: queryHash && 'SHA512',
     };
 
     const jwtToken = jwt.sign(payload, this.JwtSecret);
@@ -148,18 +149,19 @@ export class ApiUpbit {
   private async requestApi<T>(
     httpMethod: AxiosRequestConfig['method'],
     endpoint: string,
-    body?: Record<string, unknown>,
+    query?: Record<string, unknown>,
   ): Promise<T> {
-    const queryHash = this.makeQueryHash(body);
+    const queryHash = this.makeQueryHash(query);
     const bearerToken = this.makeJwtToken(queryHash);
 
     const res = <AxiosResponse<T>>await axios({
       method: httpMethod,
-      url: `${this.UpbitHost}${endpoint}${queryHash ? `?${queryHash}` : ''}`,
+      url: `${this.UpbitHost}${endpoint}${
+        query ? `?${qs.stringify(query)}` : ''
+      }`,
       headers: {
         Authorization: bearerToken,
       },
-      data: body,
     });
 
     return res.data;

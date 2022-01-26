@@ -79,4 +79,3 @@ wrapper for upbit API
 #### Link
   - [Semantic-Release](https://github.com/semantic-release/semantic-release)
   - [Upbit API Documents](https://docs.upbit.com/)
-
