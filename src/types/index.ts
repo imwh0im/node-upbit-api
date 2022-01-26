@@ -8,3 +8,7 @@ export * from './get-orders-request-query.interface';
 export * from './get-orders-response.interface';
 export * from './cancel-order-request-query.interface';
 export * from './cancel-order-response.interface';
+export * from './side.interface';
+export * from './order-type.interface';
+export * from './post-orders-request-query.interface';
+export * from './post-orders-response.interface';

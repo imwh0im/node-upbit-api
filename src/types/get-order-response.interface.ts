@@ -1,4 +1,5 @@
 import { GetOrdersResponse } from './get-orders-response.interface';
+import { Side } from './side.interface';
 
 interface Trade {
   /** Market Unique ID */
@@ -12,7 +13,7 @@ interface Trade {
   /** Completed Contract Total Price */
   funds: string;
   /** Order Method */
-  side: string;
+  side: Side;
 }
 
 export interface GetOrderResponse extends GetOrdersResponse {

@@ -2,11 +2,14 @@
   "name": "upbitjs",
   "version": "0.0.1",
   "description": "Wrapper for upbit API",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "sbin": "ts-node",
     "build": "rm -rf ./dist && tsc -p tsconfig.json",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +23,6 @@
   },
   "homepage": "https://github.com/imwh0im/upbitjs#readme",
   "dependencies": {
-    "api": "^4.2.0",
     "axios": "^0.24.0",
     "jsonwebtoken": "^8.5.1",
     "query-string": "^7.1.0",

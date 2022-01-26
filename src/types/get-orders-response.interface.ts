@@ -1,10 +1,13 @@
+import { OrderType } from './order-type.interface';
+import { Side } from './side.interface';
+
 export interface GetOrdersResponse {
   /** Order Unique ID */
   uuid: string;
   /** Order Method */
-  side: string;
+  side: Side;
   /** Order Type */
-  ord_type: string;
+  ord_type: OrderType;
   /** Price */
   price: string;
   /** Order Status */
@@ -28,5 +31,5 @@ export interface GetOrdersResponse {
   /** Completed Execution Volume */
   executed_volume: string;
   /** The number of contracts on the order */
-  trades_count: number;
+  trade_count: number;
 }

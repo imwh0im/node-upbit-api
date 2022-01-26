@@ -13,6 +13,8 @@ import {
   GetOrdersRequestQuery,
   GetOrdersResponse,
   JwtPaylaod,
+  PostOrdersRequestQuery,
+  PostOrdersResponse,
 } from './types';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { v4 as uuidV4 } from 'uuid';
@@ -91,9 +93,24 @@ export class ApiUpbit {
 
   /**
    * Cancel Order
+   * `DELETE /v1/order`
+   * https://docs.upbit.com/reference/%EC%A3%BC%EB%AC%B8-%EC%B7%A8%EC%86%8C
    */
-  public async cancelOrder(query: CancelOrderRequestQuery) {
+  public async cancelOrder(
+    query: CancelOrderRequestQuery,
+  ): Promise<CancelOrderResponse> {
     return this.requestApi<CancelOrderResponse>('DELETE', '/order', query);
+  }
+
+  /**
+   * Request An Order
+   * `POST /v1/orders`
+   * https://docs.upbit.com/reference/%EC%A3%BC%EB%AC%B8%ED%95%98%EA%B8%B0
+   */
+  public async postOrders(
+    query: PostOrdersRequestQuery,
+  ): Promise<PostOrdersResponse> {
+    return this.requestApi<PostOrdersResponse>('POST', '/orders', query);
   }
 
   /**
