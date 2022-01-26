@@ -77,7 +77,6 @@ wrapper for upbit API
     - [Reference](https://www.conventionalcommits.org/ko/v1.0.0/)
 
 #### Link
-  - [Semantic-Release](https://github.com/semantic-release/semantic-release#how-does-it-work)
+  - [Semantic-Release](https://github.com/semantic-release/semantic-release)
   - [Upbit API Documents](https://docs.upbit.com/)
-  - [AWS ElasticBeanstalk](https://ap-northeast-2.console.aws.amazon.com/elasticbeanstalk/home?region=ap-northeast-2#/application/overview?applicationName=woodstock-web-api)
 
