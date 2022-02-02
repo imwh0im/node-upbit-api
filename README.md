@@ -1,4 +1,4 @@
-# upbitjs
+# node-upbit-api
 wrapper for upbit API
 
 ### Installation
