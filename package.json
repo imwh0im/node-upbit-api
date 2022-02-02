@@ -1,6 +1,6 @@
 {
   "name": "upbitjs",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Wrapper for upbit API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,11 +10,12 @@
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imwh0im/upbitjs.git"
+    "url": "https://github.com/imwh0im/upbitjs.git"
   },
   "author": "",
   "license": "MIT",
@@ -49,6 +50,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1",
+    "semantic-release": "^19.0.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
   }
