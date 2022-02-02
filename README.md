@@ -15,7 +15,7 @@ wrapper for upbit API
   ```bash
   $ npm run lint  # Only Check Lint
   $ npm run lint:fix  # Fix to Lint Error
-  $ npm run foramt  # Check prettier
+  $ npm run format  # Check prettier
   ```
 
 ### Available API List

@@ -5,6 +5,5 @@ release.config.js
 .eslintrc.js
 package-lock.json
 .github/
-node_modules/
 .prettierignore
 .prettierrc.js
