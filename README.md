@@ -12,7 +12,7 @@ wrapper for upbit API
   ```
 
 ### Lint
-  ```bash
+  ```sh
   $ npm run lint  # Only Check Lint
   $ npm run lint:fix  # Fix to Lint Error
   $ npm run format  # Check prettier
@@ -38,7 +38,7 @@ wrapper for upbit API
         - [cancelOrder]()
         - Cancel Order
       - [x] `POST /v1/orders`
-        - [postORders]()
+        - [postOrders]()
         - Request An Order
     - Withdrawal
       - [ ] `GET /v1/withdraws`
