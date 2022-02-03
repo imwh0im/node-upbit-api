@@ -27,6 +27,15 @@ wrapper for upbit API
   $ npm run format  # Check prettier
   ```
 
+### How to Use
+  ```typescript
+  import ApiUpbit from 'node-upbit-api';
+
+  new ApiUpbit('accessKey', 'secretKey').getAccounts().then((accounts) => {
+    console.log(accounts);
+  });
+  ```
+
 ### Available API List
   - Exchange API
     - Assets

@@ -1,6 +1,6 @@
 import { GetOrdersResponse } from './get-orders-response.interface';
 
 export type PostOrdersResponse = GetOrdersResponse & {
-  /** The average price */
+  /** Average Price */
   avg_price: string;
 };
