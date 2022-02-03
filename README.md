@@ -3,7 +3,7 @@ wrapper for upbit API
 
 ### Installation
   ```sh
-  $ npm run ci
+  $ npm ci
   ```
 
 ### Build
@@ -16,6 +16,15 @@ wrapper for upbit API
   $ npm run lint  # Only Check Lint
   $ npm run lint:fix  # Fix to Lint Error
   $ npm run format  # Check prettier
+  ```
+
+### How to Use
+  ```typescript
+  import * as ApiUpbit from 'node-upbit-api';
+
+  new ApiUpbit('accessKey', 'secretKey').getAccounts().then((accounts) => {
+    console.log(accounts);
+  });
   ```
 
 ### Available API List
