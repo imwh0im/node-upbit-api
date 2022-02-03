@@ -31,14 +31,14 @@ wrapper for upbit API
   - Exchange API
     - Assets
       - [x] `GET /v1/accounts`
-        - [getAccounts]()
+        - [getAccounts](/docs/exchange-api/assets/get-accounts.md)
         - Show List of assets you have.
     - Orders
       - [x] `GET /v1/orders/chance`
-        - [getOrdersChance]()
+        - [getOrdersChance](/docs/exchange-api/orders/get-orders-chance.md)
         - Check the order availability information by market.
       - [x] `GET /v1/order`
-        - [getOrder]()
+        - [getOrder](/docs/exchange-api/orders/get-order.md)
         - Inquire individual orders through the order UUID.
       - [x] `GET /v1/orders`
         - [getOrders]()
