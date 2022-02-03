@@ -61,6 +61,7 @@ wrapper for upbit API
     - Withdrawal
       - [x] `GET /v1/withdraws`
         - [getWithdraws](/docs/exchange-api/withdraw/get-withdraws.md)
+        - Withdraws List
       - [ ] `GET /v1/withdraw`
       - [ ] `GET /v1/withdraws/chance`
       - [ ] `POST /v1/withdraws/coin`
