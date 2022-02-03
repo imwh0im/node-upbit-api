@@ -1,9 +1,18 @@
+<p align="center">
+    <a href="https://www.npmjs.com/package/node-upbit-api">
+        <img src="https://img.shields.io/npm/v/node-upbit-api.svg?style=flat-square&colorB=51C838" alt="NPM Version" />
+    </a>
+    <a href="https://github.com/semantic-release/semantic-release">
+        <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" />
+    </a>
+</p>
+
 # node-upbit-api
 wrapper for upbit API
 
 ### Installation
   ```sh
-  $ npm run ci
+  $ npm ci
   ```
 
 ### Build
