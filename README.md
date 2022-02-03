@@ -20,7 +20,7 @@ wrapper for upbit API
 
 ### How to Use
   ```typescript
-  import * as ApiUpbit from 'node-upbit-api';
+  import ApiUpbit from 'node-upbit-api';
 
   new ApiUpbit('accessKey', 'secretKey').getAccounts().then((accounts) => {
     console.log(accounts);
