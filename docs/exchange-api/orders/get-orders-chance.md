@@ -8,7 +8,7 @@ const param = {
 };
 
 // ES6
-import * as ApiUpbit from 'node-upbit-api';
+import ApiUpbit from 'node-upbit-api';
 
 const res = await new ApiUpbit('accessKey', 'secretKey').getOrdersChance(param);
 console.log(res);

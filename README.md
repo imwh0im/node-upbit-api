@@ -41,13 +41,13 @@ wrapper for upbit API
         - [getOrder](/docs/exchange-api/orders/get-order.md)
         - Inquire individual orders through the order UUID.
       - [x] `GET /v1/orders`
-        - [getOrders]()
+        - [getOrders](/docs/exchange-api/orders/get-orders.md)
         - Inquire the order list.
       - [x] `DELETE /v1/order`
-        - [cancelOrder]()
+        - [cancelOrder](/docs/exchange-api/orders/cancel-order.md)
         - Cancel Order
       - [x] `POST /v1/orders`
-        - [postOrders]()
+        - [postOrders](/docs/exchange-api/orders/post-orders.md)
         - Request An Order
     - Withdrawal
       - [ ] `GET /v1/withdraws`

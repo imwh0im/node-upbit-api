@@ -1,7 +1,7 @@
 ### Example
 ```typescript
 // ES6
-import * as ApiUpbit from 'node-upbit-api';
+import ApiUpbit from 'node-upbit-api';
 
 const res = await new ApiUpbit('accessKey', 'secretKey').getAccounts();
 console.log(res);
