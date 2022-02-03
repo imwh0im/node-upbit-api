@@ -1,6 +1,6 @@
-type State = 'wait' | 'watch' | 'done' | 'cancel';
+import { OrderBy } from './order-by.interface';
 
-type OrderBy = 'asc' | 'desc';
+type State = 'wait' | 'watch' | 'done' | 'cancel';
 
 export type GetOrdersRequestQuery = {
   /** Market Unique ID */

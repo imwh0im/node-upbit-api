@@ -59,7 +59,8 @@ wrapper for upbit API
         - [postOrders](/docs/exchange-api/orders/post-orders.md)
         - Request An Order
     - Withdrawal
-      - [ ] `GET /v1/withdraws`
+      - [x] `GET /v1/withdraws`
+        - [getWithdraws](/docs/exchange-api/withdraw/get-withdraws.md)
       - [ ] `GET /v1/withdraw`
       - [ ] `GET /v1/withdraws/chance`
       - [ ] `POST /v1/withdraws/coin`

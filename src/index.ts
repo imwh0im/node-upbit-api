@@ -12,6 +12,8 @@ import {
   GetOrdersChanceResponse,
   GetOrdersRequestQuery,
   GetOrdersResponse,
+  GetWithdrawsRequestQuery,
+  GetWithdrawsResponse,
   JwtPaylaod,
   PostOrdersRequestQuery,
   PostOrdersResponse,
@@ -111,6 +113,17 @@ export default class ApiUpbit {
     query: PostOrdersRequestQuery,
   ): Promise<PostOrdersResponse> {
     return this.requestApi<PostOrdersResponse>('POST', '/orders', query);
+  }
+
+  /**
+   * Withdraws List
+   * `GET /v1/withdraws`
+   * https://docs.upbit.com/reference/%EC%A0%84%EC%B2%B4-%EC%B6%9C%EA%B8%88-%EC%A1%B0%ED%9A%8C
+   */
+  public async getWithdraws(
+    query: GetWithdrawsRequestQuery,
+  ): Promise<GetWithdrawsResponse> {
+    return this.requestApi<GetWithdrawsResponse>('GET', '/withdraws', query);
   }
 
   /**

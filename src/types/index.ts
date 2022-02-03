@@ -12,3 +12,5 @@ export * from './side.interface';
 export * from './order-type.interface';
 export * from './post-orders-request-query.interface';
 export * from './post-orders-response.interface';
+export * from './get-withdraws-request-query.interface';
+export * from './get-withdraws-response.interface';
