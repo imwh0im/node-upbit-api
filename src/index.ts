@@ -22,7 +22,7 @@ import { v4 as uuidV4 } from 'uuid';
 /**
  * UPBIT API DOCUMENTS: https://docs.upbit.com/docs
  */
-export class ApiUpbit {
+export default class ApiUpbit {
   /**
    * UPBIT API Authorization Policy
    * Get Authroization Key: https://upbit.com/service_center/open_api_guide
