@@ -1,3 +1,12 @@
+<p align="center">
+    <a href="https://www.npmjs.com/package/node-upbit-api">
+        <img src="https://img.shields.io/npm/v/node-upbit-api.svg?style=flat-square&colorB=51C838" alt="NPM Version" />
+    </a>
+    <a href="https://github.com/semantic-release/semantic-release">
+        <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" />
+    </a>
+</p>
+
 # node-upbit-api
 wrapper for upbit API
 
@@ -12,7 +21,7 @@ wrapper for upbit API
   ```
 
 ### Lint
-  ```bash
+  ```sh
   $ npm run lint  # Only Check Lint
   $ npm run lint:fix  # Fix to Lint Error
   $ npm run format  # Check prettier
@@ -31,23 +40,23 @@ wrapper for upbit API
   - Exchange API
     - Assets
       - [x] `GET /v1/accounts`
-        - [getAccounts]()
+        - [getAccounts](/docs/exchange-api/assets/get-accounts.md)
         - Show List of assets you have.
     - Orders
       - [x] `GET /v1/orders/chance`
-        - [getOrdersChance]()
+        - [getOrdersChance](/docs/exchange-api/orders/get-orders-chance.md)
         - Check the order availability information by market.
       - [x] `GET /v1/order`
-        - [getOrder]()
+        - [getOrder](/docs/exchange-api/orders/get-order.md)
         - Inquire individual orders through the order UUID.
       - [x] `GET /v1/orders`
-        - [getOrders]()
+        - [getOrders](/docs/exchange-api/orders/get-orders.md)
         - Inquire the order list.
       - [x] `DELETE /v1/order`
-        - [cancelOrder]()
+        - [cancelOrder](/docs/exchange-api/orders/cancel-order.md)
         - Cancel Order
       - [x] `POST /v1/orders`
-        - [postORders]()
+        - [postOrders](/docs/exchange-api/orders/post-orders.md)
         - Request An Order
     - Withdrawal
       - [ ] `GET /v1/withdraws`
