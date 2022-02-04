@@ -14,3 +14,7 @@ export * from './post-orders-request-query.interface';
 export * from './post-orders-response.interface';
 export * from './get-withdraws-request-query.interface';
 export * from './get-withdraws-response.interface';
+export * from './get-withdraw-request-query.interface';
+export * from './get-withdraw-response.interface';
+export * from './get-withdraws-chance-request-query.interface';
+export * from './get-withdraws-chance-response.interface';

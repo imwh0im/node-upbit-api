@@ -12,6 +12,10 @@ import {
   GetOrdersChanceResponse,
   GetOrdersRequestQuery,
   GetOrdersResponse,
+  GetWithdrawRequestQuery,
+  GetWithdrawResponse,
+  GetWithdrawsChanceRequestQuery,
+  GetWithdrawsChanceResponse,
   GetWithdrawsRequestQuery,
   GetWithdrawsResponse,
   JwtPaylaod,
@@ -124,6 +128,34 @@ export default class ApiUpbit {
     query: GetWithdrawsRequestQuery,
   ): Promise<GetWithdrawsResponse> {
     return this.requestApi<GetWithdrawsResponse>('GET', '/withdraws', query);
+  }
+
+  /** Withdraw Detail
+   * `GET /v1/withdraw`
+   * https://docs.upbit.com/reference/%EA%B0%9C%EB%B3%84-%EC%B6%9C%EA%B8%88-%EC%A1%B0%ED%9A%8C
+   */
+  public async getWithdraw(
+    query: GetWithdrawRequestQuery,
+  ): Promise<GetWithdrawResponse> {
+    if (query.txid && query.uuid) {
+      throw new Error('Either (uuid, txid) value must be included.');
+    }
+    return this.requestApi<GetWithdrawResponse>('GET', '/withdraw', query);
+  }
+
+  /**
+   * Check the possible withdrawal information of the Currency
+   * `GET /v1/withdraw/chance`
+   * https://docs.upbit.com/reference/%EC%B6%9C%EA%B8%88-%EA%B0%80%EB%8A%A5-%EC%A0%95%EB%B3%B4
+   */
+  public async getWithdrawsChance(
+    query: GetWithdrawsChanceRequestQuery,
+  ): Promise<GetWithdrawsChanceResponse> {
+    return this.requestApi<GetWithdrawsChanceResponse>(
+      'GET',
+      '/withdraws/chance',
+      query,
+    );
   }
 
   /**
