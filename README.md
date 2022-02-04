@@ -66,9 +66,11 @@ wrapper for upbit API
         - [getWithdraw](/docs/exchange-api/withdraw/get-withdraw.md)
         - Withdraw Detail
       - [x] `GET /v1/withdraws/chance`
-        - [getWithdrawsChance]
+        - [getWithdrawsChance](/docs/exchange-api/withdraw/get-withdraws-chance.md)
         - Check the possible withdrawal information of the Currency.
-      - [ ] `POST /v1/withdraws/coin`
+      - [x] `POST /v1/withdraws/coin`
+        - [postWithdrawsCoin](/docs/exchange-api/withdraw/post-withdraws-coin.md)
+        - Request an Withdraw Coin
       - [ ] `POST /v1/withdraws/krw`
     - Deposit
       - [ ] `GET /v1/deposits`

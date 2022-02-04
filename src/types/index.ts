@@ -18,3 +18,5 @@ export * from './get-withdraw-request-query.interface';
 export * from './get-withdraw-response.interface';
 export * from './get-withdraws-chance-request-query.interface';
 export * from './get-withdraws-chance-response.interface';
+export * from './post-withdraws-coin-request-body.interface';
+export * from './post-withdraws-coin-response.interface';

@@ -1,10 +1,5 @@
+import { TransactionType } from './transaction-type.interface';
 import { WithdrawState } from './withdraw-status.interface';
-
-type TransactionType =
-  /** General Withdraw */
-  | 'default'
-  /** Immediately Withdraw */
-  | 'internal';
 
 export type GetWithdrawResponse = {
   /** Deposit And Withdrawal Type */

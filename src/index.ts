@@ -21,6 +21,8 @@ import {
   JwtPaylaod,
   PostOrdersRequestQuery,
   PostOrdersResponse,
+  PostWithdrawsCoinRequestBody,
+  PostWithdrawsCoinResponse,
 } from './types';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { v4 as uuidV4 } from 'uuid';
@@ -154,6 +156,21 @@ export default class ApiUpbit {
     return this.requestApi<GetWithdrawsChanceResponse>(
       'GET',
       '/withdraws/chance',
+      query,
+    );
+  }
+
+  /**
+   * Request an Withdraw Coin
+   * `POST /v1/withdraws/coin`
+   * https://docs.upbit.com/reference/%EC%BD%94%EC%9D%B8-%EC%B6%9C%EA%B8%88%ED%95%98%EA%B8%B0
+   */
+  public async postWithdrawsCoin(
+    query: PostWithdrawsCoinRequestBody,
+  ): Promise<PostWithdrawsCoinResponse> {
+    return this.requestApi<PostWithdrawsCoinResponse>(
+      'POST',
+      '/withdraws/coin',
       query,
     );
   }
