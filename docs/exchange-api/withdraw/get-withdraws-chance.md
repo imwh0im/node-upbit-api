@@ -52,7 +52,7 @@ new ApiUpbit('accessKey', 'secretKey').getWithdrawsChance(param).then(res => con
     /** Wallet Support */
     wallet_support: [
       'deposit',
-      'withdraw'
+      'withdraw',
     ]
   },
   /** User Account Information */
@@ -87,7 +87,7 @@ new ApiUpbit('accessKey', 'secretKey').getWithdrawsChance(param).then(res => con
     /** Withdraw Price/Count Number of decimal places */
     fixed: null,
     /** Is Support Withdraw */
-    can_withdraw: true
+    can_withdraw: true,
   }
 }
 ```

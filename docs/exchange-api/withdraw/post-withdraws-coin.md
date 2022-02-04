@@ -38,22 +38,22 @@ new ApiUpbit('accessKey', 'secretKey').postWithdrawsCoin(param).then(res => cons
   /** Withdraw Unique ID */
   uuid: '35a4f1dc-1db5-4d6b-89b5-7ec137875956',
   /** Crypto Currenecy Code */
-  currency: 'XRP';
+  currency: 'XRP',
   /** Withdraw TX ID */
-  txid: '98c15999f0bdc4ae0e8a-ed35868bb0c204fe6ec29e4058a3451e-88636d1040f4baddf943274ce37cf9cc';
+  txid: '98c15999f0bdc4ae0e8a-ed35868bb0c204fe6ec29e4058a3451e-88636d1040f4baddf943274ce37cf9cc',
   /** Withdrawal Status */
   state: 'submitting' | 'submitted' | 'almost_accepted' | 'rejected' | 'accepted' | 'processing' | 'done' | 'canceled',
   /** Create Datetime */
-  created_at: '2019-02-28T15:17:51+09:00';
+  created_at: '2019-02-28T15:17:51+09:00',
   /** Done Datetime */
-  done_at: '2019-02-28T15:22:12+09:00';
+  done_at: '2019-02-28T15:22:12+09:00',
   /** Withdraw Price/Count */
-  amount: '10.0';
+  amount: '10.0',
   /** Withdraw Fee */
-  fee: '0.0';
+  fee: '0.0',
   /** KRW Conversion price. */
   krw_amount: '5000.0',
   /** Withdraw Type */
-  transaction_type: 'default' | 'internal';
+  transaction_type: 'default' | 'internal',
 }
 ```
