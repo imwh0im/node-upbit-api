@@ -24,3 +24,5 @@ export * from './post-withdraws-krw-request-body.interface';
 export * from './post-withdraws-krw-response.interface';
 export * from './get-deposits-request-query.interface';
 export * from './get-deposits-response.interface';
+export * from './get-deposit-request-query.interface';
+export * from './get-deposit-response.interface';
