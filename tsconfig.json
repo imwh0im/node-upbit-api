@@ -4,11 +4,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "removeComments": true,
-    "declaration": true,
     "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "esModuleInterop": true
-  },
-  "exclude": ["**/types/*.interface.ts"]
+  }
 }
