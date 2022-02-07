@@ -12,9 +12,19 @@ import {
   GetOrdersChanceResponse,
   GetOrdersRequestQuery,
   GetOrdersResponse,
+  GetWithdrawRequestQuery,
+  GetWithdrawResponse,
+  GetWithdrawsChanceRequestQuery,
+  GetWithdrawsChanceResponse,
+  GetWithdrawsRequestQuery,
+  GetWithdrawsResponse,
   JwtPaylaod,
   PostOrdersRequestQuery,
   PostOrdersResponse,
+  PostWithdrawsCoinRequestBody,
+  PostWithdrawsCoinResponse,
+  PostWithdrawsKrwRequestbody,
+  PostWithdrawsKrwResponse,
 } from './types';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { v4 as uuidV4 } from 'uuid';
@@ -111,6 +121,75 @@ export default class ApiUpbit {
     query: PostOrdersRequestQuery,
   ): Promise<PostOrdersResponse> {
     return this.requestApi<PostOrdersResponse>('POST', '/orders', query);
+  }
+
+  /**
+   * Withdraws List
+   * `GET /v1/withdraws`
+   * https://docs.upbit.com/reference/%EC%A0%84%EC%B2%B4-%EC%B6%9C%EA%B8%88-%EC%A1%B0%ED%9A%8C
+   */
+  public async getWithdraws(
+    query: GetWithdrawsRequestQuery,
+  ): Promise<GetWithdrawsResponse> {
+    return this.requestApi<GetWithdrawsResponse>('GET', '/withdraws', query);
+  }
+
+  /** Withdraw Detail
+   * `GET /v1/withdraw`
+   * https://docs.upbit.com/reference/%EA%B0%9C%EB%B3%84-%EC%B6%9C%EA%B8%88-%EC%A1%B0%ED%9A%8C
+   */
+  public async getWithdraw(
+    query: GetWithdrawRequestQuery,
+  ): Promise<GetWithdrawResponse> {
+    if (query.txid && query.uuid) {
+      throw new Error('Either (uuid, txid) value must be included.');
+    }
+    return this.requestApi<GetWithdrawResponse>('GET', '/withdraw', query);
+  }
+
+  /**
+   * Check the possible withdrawal information of the Currency
+   * `GET /v1/withdraw/chance`
+   * https://docs.upbit.com/reference/%EC%B6%9C%EA%B8%88-%EA%B0%80%EB%8A%A5-%EC%A0%95%EB%B3%B4
+   */
+  public async getWithdrawsChance(
+    query: GetWithdrawsChanceRequestQuery,
+  ): Promise<GetWithdrawsChanceResponse> {
+    return this.requestApi<GetWithdrawsChanceResponse>(
+      'GET',
+      '/withdraws/chance',
+      query,
+    );
+  }
+
+  /**
+   * Request an Withdraw Coin
+   * `POST /v1/withdraws/coin`
+   * https://docs.upbit.com/reference/%EC%BD%94%EC%9D%B8-%EC%B6%9C%EA%B8%88%ED%95%98%EA%B8%B0
+   */
+  public async postWithdrawsCoin(
+    body: PostWithdrawsCoinRequestBody,
+  ): Promise<PostWithdrawsCoinResponse> {
+    return this.requestApi<PostWithdrawsCoinResponse>(
+      'POST',
+      '/withdraws/coin',
+      body,
+    );
+  }
+
+  /**
+   * Request an Withdraw Krw
+   * `POST /v1/withdraws/krw`
+   * https://docs.upbit.com/reference/%EC%9B%90%ED%99%94-%EC%B6%9C%EA%B8%88%ED%95%98%EA%B8%B0
+   */
+  public async postWithdrawsKrw(
+    body: PostWithdrawsKrwRequestbody,
+  ): Promise<PostWithdrawsKrwResponse> {
+    return this.requestApi<PostWithdrawsKrwResponse>(
+      'POST',
+      '/v1/withdraws/krw',
+      body,
+    );
   }
 
   /**

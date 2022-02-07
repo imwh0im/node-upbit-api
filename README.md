@@ -59,11 +59,21 @@ wrapper for upbit API
         - [postOrders](/docs/exchange-api/orders/post-orders.md)
         - Request An Order
     - Withdrawal
-      - [ ] `GET /v1/withdraws`
-      - [ ] `GET /v1/withdraw`
-      - [ ] `GET /v1/withdraws/chance`
-      - [ ] `POST /v1/withdraws/coin`
-      - [ ] `POST /v1/withdraws/krw`
+      - [x] `GET /v1/withdraws`
+        - [getWithdraws](/docs/exchange-api/withdraw/get-withdraws.md)
+        - Withdraws List
+      - [x] `GET /v1/withdraw`
+        - [getWithdraw](/docs/exchange-api/withdraw/get-withdraw.md)
+        - Withdraw Detail
+      - [x] `GET /v1/withdraws/chance`
+        - [getWithdrawsChance](/docs/exchange-api/withdraw/get-withdraws-chance.md)
+        - Check the possible withdrawal information of the Currency.
+      - [x] `POST /v1/withdraws/coin`
+        - [postWithdrawsCoin](/docs/exchange-api/withdraw/post-withdraws-coin.md)
+        - Request an Withdraw Coin
+      - [x] `POST /v1/withdraws/krw`
+        - [postWithdrawsKrw](/docs/exchange-api/withdraw/post-withdraws-krw.md)
+        - Request an Withdraw Krw
     - Deposit
       - [ ] `GET /v1/deposits`
       - [ ] `GET /v1/deposit`
@@ -92,7 +102,7 @@ wrapper for upbit API
 ### Commit-message
   - The commit message accurately specifies the work scope.
   - The commit message refers to [semantic-release](https://github.com/semantic-release/semantic-release#how-does-it-work)
-    - [Reference](https://www.conventionalcommits.org/ko/v1.0.0/)
+    - [Reference](https://www.conventionalcommits.org/)
 
 #### Link
   - [Semantic-Release](https://github.com/semantic-release/semantic-release)
