@@ -21,3 +21,4 @@ export * from './get-withdraws-chance-response.interface';
 export * from './post-withdraws-coin-request-body.interface';
 export * from './post-withdraws-coin-response.interface';
 export * from './post-withdraws-krw-request-body.interface';
+export * from './post-withdraws-krw-response.interface';

@@ -24,6 +24,7 @@ import {
   PostWithdrawsCoinRequestBody,
   PostWithdrawsCoinResponse,
   PostWithdrawsKrwRequestbody,
+  PostWithdrawsKrwResponse,
 } from './types';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { v4 as uuidV4 } from 'uuid';
@@ -176,8 +177,19 @@ export default class ApiUpbit {
     );
   }
 
-  public async postWithdrawsKrw(body: PostWithdrawsKrwRequestbody) {
-    return this.requestApi('POST', '/v1/withdraws/krw', body);
+  /**
+   * Request an Withdraw Krw
+   * `POST /v1/withdraws/krw`
+   * https://docs.upbit.com/reference/%EC%9B%90%ED%99%94-%EC%B6%9C%EA%B8%88%ED%95%98%EA%B8%B0
+   */
+  public async postWithdrawsKrw(
+    body: PostWithdrawsKrwRequestbody,
+  ): Promise<PostWithdrawsKrwResponse> {
+    return this.requestApi<PostWithdrawsKrwResponse>(
+      'POST',
+      '/v1/withdraws/krw',
+      body,
+    );
   }
 
   /**
