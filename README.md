@@ -75,7 +75,9 @@ wrapper for upbit API
         - [postWithdrawsKrw](/docs/exchange-api/withdraw/post-withdraws-krw.md)
         - Request an Withdraw Krw
     - Deposit
-      - [ ] `GET /v1/deposits`
+      - [x] `GET /v1/deposits`
+        - [getDeposits](/docs/exchange-api/deposit/get-deposits.md)
+        - Deposits List
       - [ ] `GET /v1/deposit`
       - [ ] `POST /v1/deposit/generate_coin_address`
       - [ ] `GET /v1/deposits/coin_addresses`

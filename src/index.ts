@@ -6,6 +6,8 @@ import {
   CancelOrderRequestQuery,
   CancelOrderResponse,
   GetAccountsResponse,
+  GetDepositsRequestQuery,
+  GetDepositsResponse,
   GetOrderRequestQuery,
   GetOrderResponse,
   GetOrdersChanceRequestQuery,
@@ -190,6 +192,17 @@ export default class ApiUpbit {
       '/v1/withdraws/krw',
       body,
     );
+  }
+
+  /**
+   * Deposits List
+   * `GET /v1/deposits`
+   * https://docs.upbit.com/reference/%EC%9E%85%EA%B8%88-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%A1%B0%ED%9A%8C
+   */
+  public async getDeposits(
+    query: GetDepositsRequestQuery,
+  ): Promise<GetDepositsResponse> {
+    return this.requestApi<GetDepositsResponse>('GET', '/v1/deposits', query);
   }
 
   /**
