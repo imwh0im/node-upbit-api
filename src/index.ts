@@ -23,6 +23,8 @@ import {
   GetWithdrawsRequestQuery,
   GetWithdrawsResponse,
   JwtPaylaod,
+  PostDepositCoinAddressResponse,
+  PostDepositsCoinAddressRequestBody,
   PostOrdersRequestQuery,
   PostOrdersResponse,
   PostWithdrawsCoinRequestBody,
@@ -216,6 +218,22 @@ export default class ApiUpbit {
     query: GetDepositRequstQuery,
   ): Promise<GetDepositResponse> {
     return this.requestApi<GetDepositResponse>('GET', '/v1/deposit', query);
+  }
+
+  /**
+   * Request an Deposit Address
+   * The creation of deposit addresses is asynchronous on the server.
+   * When requesting to issue an address, <PostDepositsCoinAddressPendingResponse> will be returned as a result, and <PostDepositsCoinAddressPendingResponse> will continue to be returned until the address issuance is completed.
+   * 
+   */
+  public async postDepositCoinAddress(
+    body: PostDepositsCoinAddressRequestBody,
+  ): Promise<PostDepositCoinAddressResponse> {
+    return this.requestApi<PostDepositCoinAddressResponse>(
+      'POST',
+      '/v1/deposits/generate_coin_address',
+      body,
+    );
   }
 
   /**
