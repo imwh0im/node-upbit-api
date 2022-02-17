@@ -6,7 +6,9 @@ import {
   CancelOrderRequestQuery,
   CancelOrderResponse,
   GetAccountsResponse,
-  GetDepositCoinAddressesResponst,
+  GetDepositCoinAddreesRequstQuery,
+  GetDepositCoinAddressResponse,
+  GetDepositCoinAddressesResponse,
   GetDepositRequstQuery,
   GetDepositResponse,
   GetDepositsRequestQuery,
@@ -239,10 +241,21 @@ export default class ApiUpbit {
   /**
    * Shows the List of Assets You Have.
    */
-  public async getDepositCoinAddresses(): Promise<GetDepositCoinAddressesResponst> {
-    return this.requestApi<GetDepositCoinAddressesResponst>(
+  public async getDepositCoinAddresses(): Promise<GetDepositCoinAddressesResponse> {
+    return this.requestApi<GetDepositCoinAddressesResponse>(
       'GET',
       '/v1/deposits/coin_addresses',
+    );
+  }
+
+  /**
+   * Show The Detail of Assets You Have.
+   */
+  public async getDepositCoinAddress(query: GetDepositCoinAddreesRequstQuery) {
+    return this.requestApi<GetDepositCoinAddressResponse>(
+      'GET',
+      '/v1/deposits/coin_address',
+      query,
     );
   }
 

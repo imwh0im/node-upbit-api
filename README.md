@@ -86,7 +86,10 @@ wrapper for upbit API
         - Request an Deposit Address
       - [x] `GET /v1/deposits/coin_addresses`
         - [getDepositCoinAddresses](/docs/exchange-api/deposit/get-deposit-coin-addresses.md)
-      - [ ] `GET /v1/deposits/coin_address`
+        - Show The List of Assets You Have.
+      - [x] `GET /v1/deposits/coin_address`
+        - [getDepositCoinAddress](/docs//exchange-api/deposit/get-deposit-coin-address.md)
+        - Show The Detail of Assets You Have.
       - [ ] `POST /v1/deposits/krw`
   - Quotation API
     - Coin List
