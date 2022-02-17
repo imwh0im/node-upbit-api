@@ -88,7 +88,7 @@ wrapper for upbit API
         - [getDepositCoinAddresses](/docs/exchange-api/deposit/get-deposit-coin-addresses.md)
         - Show The List of Assets You Have.
       - [x] `GET /v1/deposits/coin_address`
-        - [getDepositCoinAddress](/docs//exchange-api/deposit/get-deposit-coin-address.md)
+        - [getDepositCoinAddress](/docs/exchange-api/deposit/get-deposit-coin-address.md)
         - Show The Detail of Assets You Have.
       - [x] `POST /v1/deposits/krw`
         - [postDepositKrw](/docs/exchange-api/deposit/post-deposit-krw.md)
