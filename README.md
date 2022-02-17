@@ -81,10 +81,13 @@ wrapper for upbit API
       - [x] `GET /v1/deposit`
         - [getDeposit](/docs/exchange-api/deposit/get-deposit.md)
         - Deposit Detail
-      - [ ] `POST /v1/deposit/generate_coin_address`
-      - [ ] `GET /v1/deposits/coin_addresses`
+      - [x] `POST /v1/deposit/generate_coin_address`
+        - [postDepositCoinAddress](/docs/exchange-api/deposit/post-deposit-coin-address.md)
+        - Request an Deposit Address
+      - [x] `GET /v1/deposits/coin_addresses`
+        - [getDepositCoinAddresses](/docs/exchange-api/deposit/get-deposit-coin-addresses.md)
       - [ ] `GET /v1/deposits/coin_address`
-      - [ ] `GET /v1/deposits/krw`
+      - [ ] `POST /v1/deposits/krw`
   - Quotation API
     - Coin List
       - [ ] `GET /v1/market/all`

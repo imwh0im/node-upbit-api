@@ -6,6 +6,7 @@ import {
   CancelOrderRequestQuery,
   CancelOrderResponse,
   GetAccountsResponse,
+  GetDepositCoinAddressesResponst,
   GetDepositRequstQuery,
   GetDepositResponse,
   GetDepositsRequestQuery,
@@ -224,7 +225,6 @@ export default class ApiUpbit {
    * Request an Deposit Address
    * The creation of deposit addresses is asynchronous on the server.
    * When requesting to issue an address, <PostDepositsCoinAddressPendingResponse> will be returned as a result, and <PostDepositsCoinAddressPendingResponse> will continue to be returned until the address issuance is completed.
-   * 
    */
   public async postDepositCoinAddress(
     body: PostDepositsCoinAddressRequestBody,
@@ -233,6 +233,16 @@ export default class ApiUpbit {
       'POST',
       '/v1/deposits/generate_coin_address',
       body,
+    );
+  }
+
+  /**
+   * Shows the List of Assets You Have.
+   */
+  public async getDepositCoinAddresses(): Promise<GetDepositCoinAddressesResponst> {
+    return this.requestApi<GetDepositCoinAddressesResponst>(
+      'GET',
+      '/v1/deposits/coin_addresses',
     );
   }
 

@@ -28,3 +28,4 @@ export * from './get-deposit-request-query.interface';
 export * from './get-deposit-response.interface';
 export * from './post-deposits-coin-address-request-body.interface';
 export * from './post-deposit-coin-address-response.interface';
+export * from './get-deposit-coin-addresses-response.interface';

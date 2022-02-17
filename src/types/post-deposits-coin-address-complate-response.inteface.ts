@@ -4,5 +4,5 @@ export type PostDepositsCoinAddressComplateResponse = {
   /** Currnecy Deposit Address */
   deposit_address: string;
   /** Currency Deposit Secondary Address */
-  secondary_address?: string;
+  secondary_address: string | null;
 };
