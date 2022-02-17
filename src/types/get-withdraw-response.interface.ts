@@ -6,7 +6,7 @@ export type GetWithdrawResponse = {
   type: string;
   /** Withdraw Unique ID */
   uuid: string;
-  /** Crypto Currenecy Code */
+  /** Currenecy Code */
   currency: string;
   /** Withdraw TX ID */
   txid: string;

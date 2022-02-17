@@ -75,12 +75,24 @@ wrapper for upbit API
         - [postWithdrawsKrw](/docs/exchange-api/withdraw/post-withdraws-krw.md)
         - Request an Withdraw Krw
     - Deposit
-      - [ ] `GET /v1/deposits`
-      - [ ] `GET /v1/deposit`
-      - [ ] `POST /v1/deposit/generate_coin_address`
-      - [ ] `GET /v1/deposits/coin_addresses`
-      - [ ] `GET /v1/deposits/coin_address`
-      - [ ] `GET /v1/deposits/krw`
+      - [x] `GET /v1/deposits`
+        - [getDeposits](/docs/exchange-api/deposit/get-deposits.md)
+        - Deposits List
+      - [x] `GET /v1/deposit`
+        - [getDeposit](/docs/exchange-api/deposit/get-deposit.md)
+        - Deposit Detail
+      - [x] `POST /v1/deposit/generate_coin_address`
+        - [postDepositCoinAddress](/docs/exchange-api/deposit/post-deposit-coin-address.md)
+        - Request an Deposit Address
+      - [x] `GET /v1/deposits/coin_addresses`
+        - [getDepositCoinAddresses](/docs/exchange-api/deposit/get-deposit-coin-addresses.md)
+        - Show The List of Assets You Have.
+      - [x] `GET /v1/deposits/coin_address`
+        - [getDepositCoinAddress](/docs/exchange-api/deposit/get-deposit-coin-address.md)
+        - Show The Detail of Assets You Have.
+      - [x] `POST /v1/deposits/krw`
+        - [postDepositKrw](/docs/exchange-api/deposit/post-deposit-krw.md)
+        - Request a Deposit of KRW.
   - Quotation API
     - Coin List
       - [ ] `GET /v1/market/all`

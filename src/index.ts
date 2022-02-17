@@ -6,6 +6,13 @@ import {
   CancelOrderRequestQuery,
   CancelOrderResponse,
   GetAccountsResponse,
+  GetDepositCoinAddreesRequstQuery,
+  GetDepositCoinAddressResponse,
+  GetDepositCoinAddressesResponse,
+  GetDepositRequstQuery,
+  GetDepositResponse,
+  GetDepositsRequestQuery,
+  GetDepositsResponse,
   GetOrderRequestQuery,
   GetOrderResponse,
   GetOrdersChanceRequestQuery,
@@ -19,6 +26,10 @@ import {
   GetWithdrawsRequestQuery,
   GetWithdrawsResponse,
   JwtPaylaod,
+  PostDepositCoinAddressResponse,
+  PostDepositKrwRequestBody,
+  PostDepositKrwResponse,
+  PostDepositsCoinAddressRequestBody,
   PostOrdersRequestQuery,
   PostOrdersResponse,
   PostWithdrawsCoinRequestBody,
@@ -188,6 +199,77 @@ export default class ApiUpbit {
     return this.requestApi<PostWithdrawsKrwResponse>(
       'POST',
       '/v1/withdraws/krw',
+      body,
+    );
+  }
+
+  /**
+   * Deposits List
+   * `GET /v1/deposits`
+   * https://docs.upbit.com/reference/%EC%9E%85%EA%B8%88-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%A1%B0%ED%9A%8C
+   */
+  public async getDeposits(
+    query: GetDepositsRequestQuery,
+  ): Promise<GetDepositsResponse> {
+    return this.requestApi<GetDepositsResponse>('GET', '/v1/deposits', query);
+  }
+
+  /**
+   * Deposit Detail
+   * `GET /v1/deposit`
+   * https://docs.upbit.com/reference/%EA%B0%9C%EB%B3%84-%EC%9E%85%EA%B8%88-%EC%A1%B0%ED%9A%8C
+   */
+  public async getDeposit(
+    query: GetDepositRequstQuery,
+  ): Promise<GetDepositResponse> {
+    return this.requestApi<GetDepositResponse>('GET', '/v1/deposit', query);
+  }
+
+  /**
+   * Request an Deposit Address
+   * The creation of deposit addresses is asynchronous on the server.
+   * When requesting to issue an address, <PostDepositsCoinAddressPendingResponse> will be returned as a result, and <PostDepositsCoinAddressPendingResponse> will continue to be returned until the address issuance is completed.
+   */
+  public async postDepositCoinAddress(
+    body: PostDepositsCoinAddressRequestBody,
+  ): Promise<PostDepositCoinAddressResponse> {
+    return this.requestApi<PostDepositCoinAddressResponse>(
+      'POST',
+      '/v1/deposits/generate_coin_address',
+      body,
+    );
+  }
+
+  /**
+   * Shows the List of Assets You Have.
+   */
+  public async getDepositCoinAddresses(): Promise<GetDepositCoinAddressesResponse> {
+    return this.requestApi<GetDepositCoinAddressesResponse>(
+      'GET',
+      '/v1/deposits/coin_addresses',
+    );
+  }
+
+  /**
+   * Show The Detail of Assets You Have.
+   */
+  public async getDepositCoinAddress(query: GetDepositCoinAddreesRequstQuery) {
+    return this.requestApi<GetDepositCoinAddressResponse>(
+      'GET',
+      '/v1/deposits/coin_address',
+      query,
+    );
+  }
+
+  /**
+   * Request a Deposit of KRW.
+   */
+  public async postDepositKrw(
+    body: PostDepositKrwRequestBody,
+  ): Promise<PostDepositKrwResponse> {
+    return this.requestApi<PostDepositKrwResponse>(
+      'POST',
+      '/v1/deposits/krw',
       body,
     );
   }
