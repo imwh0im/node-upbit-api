@@ -27,6 +27,8 @@ import {
   GetWithdrawsResponse,
   JwtPaylaod,
   PostDepositCoinAddressResponse,
+  PostDepositKrwRequestBody,
+  PostDepositKrwResponse,
   PostDepositsCoinAddressRequestBody,
   PostOrdersRequestQuery,
   PostOrdersResponse,
@@ -256,6 +258,19 @@ export default class ApiUpbit {
       'GET',
       '/v1/deposits/coin_address',
       query,
+    );
+  }
+
+  /**
+   * Request a Deposit of KRW.
+   */
+  public async postDepositKrw(
+    body: PostDepositKrwRequestBody,
+  ): Promise<PostDepositKrwResponse> {
+    return this.requestApi<PostDepositKrwResponse>(
+      'POST',
+      '/v1/deposits/krw',
+      body,
     );
   }
 

@@ -90,7 +90,9 @@ wrapper for upbit API
       - [x] `GET /v1/deposits/coin_address`
         - [getDepositCoinAddress](/docs//exchange-api/deposit/get-deposit-coin-address.md)
         - Show The Detail of Assets You Have.
-      - [ ] `POST /v1/deposits/krw`
+      - [x] `POST /v1/deposits/krw`
+        - [postDepositKrw](/docs/exchange-api/deposit/post-deposit-krw.md)
+        - Request a Deposit of KRW.
   - Quotation API
     - Coin List
       - [ ] `GET /v1/market/all`
